@@ -9,9 +9,41 @@
 <h1 class="header">Freezes Games</h1>
 
 <a href="mario-64.html"><button>SUPER MARIO</button style="width: 100px; height; 50px;"> </a>
+const romPath = 'roms/your-rom-file.ext'; // Change to your ROM file name and extension
+
+fetch(romPath)
+    .then(response => {
+        if (!response.ok) throw new Error('Failed to load ROM');
+        return response.arrayBuffer();
+    })
+    .then(romData => {
+        // Initialize your emulator with the ROM data
+        initializeEmulator(romData);
+    })
+    .catch(error => console.error(error));
 
 <a href="rlsm64.html"><button>SUPER MARIO 64</button style="width: 100px; height; 50px;"> </a>
 cookieclicker.html
 
 <a href="emu.html"><button>emulator</button style="width: 100px; height; 50px;"> </a>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Emulator</title>
+    <script src="js/emulator.js"></script> <!-- Adjust path as necessary -->
+</head>
+<body>
+    <h1>My Emulator</h1>
+    <canvas id="emulatorCanvas" width="640" height="480"></canvas>
+    <script>
+        // Initialize your emulator here
+        const canvas = document.getElementById('emulatorCanvas');
+        // Call your emulator functions here
+    </script>
+</body>
+</html>
+
 
