@@ -12,60 +12,6 @@
 
 <a href="emu.html"><button>emulator</button style="width: 100px; height; 50px;"> </a>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Emulator</title>
-    <script src="js/emulator.js"></script> <!-- Adjust path if needed -->
-</head>
-<body>
-    <h1>My Emulator</h1>
-    <canvas id="emulatorCanvas" width="640" height="480"></canvas>
-    <script>
-        const canvas = document.getElementById('emulatorCanvas');
-
-        // Function to load ROM
-        function loadROM(romName) {
-            const romPath = `roms/${romName}`;
-            fetch(romPath)
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load ROM');
-                    return response.arrayBuffer();
-                })
-                .then(romData => {
-                    // Initialize your emulator with the ROM data
-                    initializeEmulator(romData); // Replace with your emulator's init function
-                })
-                .catch(error => console.error(error));
-        }
-
-        // Load your ROM file here
-        loadROM('Super Mario Bros (E).nes'); // Change to your ROM file name and extension
-    </script>
-</body>
-</html>
-function loadROM(romName) {
-    const romPath = `roms/${romName}`; // Ensure this path is correct
-    console.log(`Loading ROM from: ${romPath}`);
-    fetch(romPath)
-        .then(response => {
-            if (!response.ok) {
-                console.error(`Failed to load ROM: ${response.status} ${response.statusText}`);
-                throw new Error('Failed to load ROM');
-            }
-            return response.arrayBuffer();
-        })
-        .then(romData => {
-            console.log('ROM loaded successfully');
-            initializeEmulator(romData); // Replace with your emulator's init function
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-// Load your actual ROM file
-loadROM('Super Mario Bros (E).nes'); // Replace with your actual ROM file name
 
 
 
