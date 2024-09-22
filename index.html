@@ -46,6 +46,26 @@
     </script>
 </body>
 </html>
+function loadROM(romName) {
+    const romPath = `roms/${romName}`; // Ensure this path is correct
+    console.log(`Loading ROM from: ${romPath}`);
+    fetch(romPath)
+        .then(response => {
+            if (!response.ok) {
+                console.error(`Failed to load ROM: ${response.status} ${response.statusText}`);
+                throw new Error('Failed to load ROM');
+            }
+            return response.arrayBuffer();
+        })
+        .then(romData => {
+            console.log('ROM loaded successfully');
+            initializeEmulator(romData); // Replace with your emulator's init function
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+// Load your actual ROM file
+loadROM('Super Mario Bros (E).nes'); // Replace with your actual ROM file name
 
 
 
