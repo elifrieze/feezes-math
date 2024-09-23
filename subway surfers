@@ -1,28 +1,31 @@
-<title>canvas</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreezesGames</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevent scrolling */
+    }
 
-<link rel="icon" href="/C:\https://community.canvaslms.com/html/@812A943F44A0BA1CC71EAEE00643A823/assets/Canvas_Bug_Color_RGB.png">
-
-<h1 class="header">Freezes Games</h1>
-
-<a href="mario-64.html"><button>SUPER MARIO</button style="width: 100px; height; 50px;"> </a>
-
-
-<a href="rlsm64.html"><button>SUPER MARIO 64</button style="width: 100px; height; 50px;"> </a>
-
-
-<a href="emu.html"><button>emulator</button style="width: 100px; height; 50px;"> </a>
-
-<a href="mc.html"><button>mario kart</button style="width: 100px; height; 50px;"> </a>
-
-
-<a href="run 3.html"><button>run 3</button style="width: 100px; height; 50px;"> </a>
-
-<a href="bitlife.html"><button>bitlife</button style="width: 100px; height; 50px;"> </a>
-
-<a href="cookieclicker.html"><button>cookie clicker</button style="width: 100px; height; 50px;"> </a>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8652374629915665"
-     crossorigin="anonymous"></script>
-
-
-<link rel="icon" type="image/png" href="https://img.icons8.com/?size=512&id=oECahFP3ibID&format=png">https://evanrunnergames.github.io/unblocked-plexygames/
+    .game-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Black background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+    <iframe class="game-iframe" seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" src="https://www.plexygames.com/games/super-mario-flash.html"></iframe>
+</body>
+</html>
